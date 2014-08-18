@@ -12,21 +12,17 @@ define('router', ['jquery', 'underscore', 'backbone'], function($, _, Backbone) 
 
 		routes: {
 			'chelsea': 'goChelsea',
-			'arsenal': '',
-			'bayern_munich': '',
-			'barcelona': '',
-			'psg': '',
-			'real_madrid': '',
-			'man_city': '',
-			'man_united': '',
-			'milan': '',
-			'borussia_dortmund': '',
-			'tottenham': '',
-			'newcastle': ''
-		},
-
-		goChelsea: function() {
-			console.log('Chelsea');
+			'arsenal': 'goArsenal',
+			'bayern_munich': 'goBayernMunich',
+			'barcelona': 'goBarcelona',
+			'psg': 'goPSG',
+			'real_madrid': 'goRealMadrid',
+			'man_city': 'goManCity',
+			'man_united': 'goManUnited',
+			'milan': 'goMilan',
+			'borussia_dortmund': 'goBorussiaDortmund',
+			'tottenham': 'goTottenham',
+			'newcastle': 'goNewcastle'
 		}
 	});
 

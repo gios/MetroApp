@@ -35,7 +35,9 @@ define('view', ['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _,
 			// clubsBody to main area (div id="clubsArea")
 			$('#clubsArea').html(clubsBody);
 
-			$('img').animate({opacity: 1}, 1000);
+			$('img').animate({
+				opacity: 1
+			}, 1000);
 		}
 	});
 
@@ -49,22 +51,6 @@ define('view', ['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _,
 		initialize: function() {
 			$('body').find('#clubsArea').prepend($progress);
 			$('#clubsArea').find('div:first').attr('id', 'progress');
-
-			console.log(this.model.get('value'));
-
-			customEvent.on('testProgress', function() {
-				var i = 0;
-				var self = this;
-
-				var timer = setInterval(function() {
-					i+=0.1;
-					self.model.set('value', i.toFixed(1));
-					console.log(self.model.get('value'));
-					if(i >= 100) clearInterval(timer);
-				}, 1);
-
-			}, this);
-
 		},
 
 		render: function() {
@@ -73,13 +59,7 @@ define('view', ['jquery', 'underscore', 'backbone', 'bootstrap'], function($, _,
 			progressBody += "</div>";
 			progressBody += "</div>";
 			$('#progress').html(progressBody);
-		},
-
-		events: {
-			'click': function() {
-				this.model.on('change', this.render, this);
-				customEvent.trigger('testProgress');
-			}
+			console.log(this.model.get('value'));
 		}
 	});
 

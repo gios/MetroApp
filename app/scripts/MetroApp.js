@@ -80,13 +80,243 @@ require(['jquery', 'underscore', 'backbone', 'model', 'collection', 'view', 'rou
 	clubsView.render();
 
 	var progressView = new View.Progress({
-		model: progressModel
+		model: progressModel,
+		collection: clubsCollection
 	});
 
 	progressView.render();
 
 	var router = new Router.Router;
-	Backbone.history.start()
+
+	router.on('route:goChelsea', function() {
+		console.log('Chelsea');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goArsenal', function() {
+		console.log('Arsenal');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goBayernMunich', function() {
+		console.log('Bayern Munich');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goBarcelona', function() {
+		console.log('Barcelona');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goPSG', function() {
+		console.log('PSG');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goRealMadrid', function() {
+		console.log('Real Madrid');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goManCity', function() {
+		console.log('Man City');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goManUnited', function() {
+		console.log('Man United');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goMilan', function() {
+		console.log('Milan');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goBorussiaDortmund', function() {
+		console.log('Borussia Dortmund');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goTottenham', function() {
+		console.log('Tottenham');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	router.on('route:goNewcastle', function() {
+		console.log('Newcastle');
+
+		var i = 0;
+		var interval = setInterval(function() {
+			progressModel.set('value', i += 33.4);
+			progressModel.on('change', progressView.render(), this);
+			console.log(progressModel.get('value'));
+			if (progressModel.get('value') >= 100) {
+				$('.progress').find('div').animate({
+					opacity: 0
+				}, 1000, function() {
+					$('.progress').find('div').attr('aria-valuenow', 0);
+				});
+				clearInterval(interval);
+			};
+		}, 1000);
+	});
+
+	Backbone.history.start();
 
 	// Refresh Collection.DataCollection
 	console.log(clubsCollection.toJSON());
