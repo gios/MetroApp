@@ -1,0 +1,20 @@
+{
+  "name": "MetroApp",
+  "version": "0.1.0",
+  "authors": [
+    "Gios"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.1.2",
+    "jquery": "~2.1.1",
+    "requirejs": "~2.1.14"
+  }
+}

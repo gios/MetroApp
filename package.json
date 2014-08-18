@@ -1,0 +1,15 @@
+{
+  "name": "MetroApp",
+  "version": "0.1.0",
+  "main": "build/MetroApp.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gios",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-cssmin": "^0.10.0",
+    "grunt-contrib-requirejs": "^0.4.4"
+  }
+}
