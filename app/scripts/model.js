@@ -16,7 +16,14 @@ define('model', ['jquery', 'underscore', 'backbone'], function($, _, Backbone) {
 		}
 	});
 
+	var Progress = Backbone.Model.extend({
+		defaults: {
+			value: 0
+		}
+	});
+
 	return {
-		Club: Club
+		Club: Club,
+		Progress: Progress
 	};
 });

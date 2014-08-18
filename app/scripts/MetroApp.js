@@ -5,9 +5,10 @@
 
 'use strict'
 
-require(['jquery', 'underscore', 'backbone', 'model', 'collection', 'view'], function($, _, Backbone, Model, Collection, View) {
+require(['jquery', 'underscore', 'backbone', 'model', 'collection', 'view', 'router'], function($, _, Backbone, Model, Collection, View, Router) {
 
-	var club = new Model.Club;
+	var clubModel = new Model.Club;
+	var progressModel = new Model.Progress;
 
 	// Add clubs to collection
 	var clubsCollection = new Collection.ClubCollection([{
@@ -65,14 +66,12 @@ require(['jquery', 'underscore', 'backbone', 'model', 'collection', 'view'], fun
 		image: 'images/tottenham.png',
 		rank: 4.5,
 		url: '#tottenham'
-	},
-	{
+	}, {
 		name: 'Newcastle',
 		image: 'images/newcastle.png',
 		rank: 4,
 		url: '#newcastle'
-	}
-	]);
+	}]);
 
 	var clubsView = new View.ClubsView({
 		collection: clubsCollection
@@ -80,9 +79,14 @@ require(['jquery', 'underscore', 'backbone', 'model', 'collection', 'view'], fun
 
 	clubsView.render();
 
-	var progress = new View.Progress({
-		collection: clubsCollection
+	var progressView = new View.Progress({
+		model: progressModel
 	});
+
+	progressView.render();
+
+	var router = new Router.Router;
+	Backbone.history.start()
 
 	// Refresh Collection.DataCollection
 	console.log(clubsCollection.toJSON());

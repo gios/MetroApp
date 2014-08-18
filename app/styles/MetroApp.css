@@ -3,10 +3,10 @@
  * Style
  */
 
- body {
- 	background: #BAF2F5;
- }
-
  #clubsArea {
  	margin: 2em;
+ }
+
+ img {
+ 	opacity: 0;
  }
